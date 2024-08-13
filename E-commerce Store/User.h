@@ -3,29 +3,30 @@
 
 #include <iostream>
 #include <string>
+using namespace std;
 
 class User {
 private:
-    std::string username;
-    std::string password;
-    std::string address;
+    string username;
+    string password;
+    string address;
 
 public:
     User() : username(""), password(""), address("") {}
 
-    User(std::string u, std::string p, std::string a) : username(u), password(p), address(a) {}
+    User(string u, string p, string a) : username(u), password(p), address(a) {}
 
-    bool login(std::string u, std::string p) const {
+    bool login(string u, string p) const {
         return username == u && password == p;
     }
 
     void displayUser() const {
-        std::cout << "Username: " << username << std::endl;
-        std::cout << "Address: " << address << std::endl;
+        cout << "Username: " << username << endl;
+        cout << "Address: " << address << endl;
     }
 
-    std::string getUsername() const { return username; }
-    std::string getAddress() const { return address; }
+    string getUsername() const { return username; }
+    string getAddress() const { return address; }
 };
 
 #endif
