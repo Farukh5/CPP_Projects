@@ -3,24 +3,25 @@
 
 #include <iostream>
 #include <string>
+using namespace std;
 
 class Product {
 private:
     int productId;
-    std::string name;
+    string name;
     double price;
     int stock;
 
 public:
     Product() : productId(0), name(""), price(0.0), stock(0) {}
 
-    Product(int id, std::string n, double p, int s) : productId(id), name(n), price(p), stock(s) {}
+    Product(int id, sstring n, double p, int s) : productId(id), name(n), price(p), stock(s) {}
 
     void displayProduct() const {
-        std::cout << "Product ID: " << productId << std::endl;
-        std::cout << "Name: " << name << std::endl;
-        std::cout << "Price: $" << price << std::endl;
-        std::cout << "Stock: " << stock << std::endl;
+        cout << "Product ID: " << productId << endl;
+        cout << "Name: " << name << endl;
+        cout << "Price: $" << price << endl;
+        cout << "Stock: " << stock << endl;
     }
 
     int getProductId() const { return productId; }
@@ -31,7 +32,7 @@ public:
         if (quantity <= stock) {
             stock -= quantity;
         } else {
-            std::cout << "Insufficient stock!" << std::endl;
+            cout << "Insufficient stock!" << endl;
         }
     }
 };
